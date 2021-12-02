@@ -43,7 +43,6 @@ export const ContactsPage = ({ contacts, addContact }) => {               // In 
       //console.log("Email enter already exists")
     } else {
       setDuplicate(false);
-
     }
   }, [email, contacts]); // condition effect will only take place when email changes, but we also need contacts as it is a dependancy for name
 
