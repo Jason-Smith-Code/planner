@@ -6,7 +6,7 @@ import { TileList } from "../../components/tileList/TileList";            // We 
 export const ContactsPage = ({ contacts, addContact }) => {               // In App.js, we passed 2 props to the contact page, contacts, and addContact. These need to be extracted here        
   // The three state variables holding the form’s contact data should each default to an empty string using useState('')
   const [firstName, setfirstName] = useState(""); 
-  const [secondName, setSecondName] = useState("");                                  
+  const [lastName, setlastName] = useState("");                                  
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   // Use a fourth local state variable to track a duplicate Email. It should be false by default using useState(false)
@@ -16,9 +16,9 @@ export const ContactsPage = ({ contacts, addContact }) => {               // In 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!duplicate) {
-      addContact(firstName, secondName, phone, email);
+      addContact(firstName, lastName, phone, email);
       setfirstName("");
-      setSecondName("");
+      setlastName("");
       setPhone("");
       setEmail("");
     }
@@ -56,8 +56,8 @@ export const ContactsPage = ({ contacts, addContact }) => {               // In 
         <ContactForm
           firstName={firstName}
           setfirstName={setfirstName}
-          secondName={secondName}
-          setSecondName={setSecondName}
+          lastName={lastName}
+          setlastName={setlastName}
           phone={phone}
           setPhone={setPhone}
           email={email}

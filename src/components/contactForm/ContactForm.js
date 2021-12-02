@@ -3,8 +3,8 @@ import React from "react";
 export const ContactForm = ({ 
   firstName,                       // We use this to determine the value of the input field for name
   setfirstName, 
-  secondName,
-  setSecondName,                   // We use this when applying onChange to change the value of name
+  lastName,
+  setlastName,                   // We use this when applying onChange to change the value of name
   phone,
   setPhone,
   email,
@@ -32,11 +32,11 @@ export const ContactForm = ({
       <label>
         <input
           type="text"
-          name="secondName"
-          value={secondName}
-          onChange={(e) => setSecondName(e.target.value)}
+          name="lastName"
+          value={lastName}
+          onChange={(e) => setlastName(e.target.value)}
           required
-          placeholder="Contact Second Name"
+          placeholder="Contact Last Name"
         />
       </label>
       <br />
